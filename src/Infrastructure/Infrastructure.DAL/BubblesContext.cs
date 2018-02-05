@@ -5,7 +5,7 @@ namespace NOD.bubbles.ui.Infrastructure.DAL
 {
     public class BubblesContext : DbContext
     {
-        public BubblesContext(DbContextOptions<BubblesContext> options)
+        public BubblesContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -13,5 +13,9 @@ namespace NOD.bubbles.ui.Infrastructure.DAL
         public DbSet<Bubble> Bubbles { get; set; }
 
         public DbSet<Person> Persons { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
 }

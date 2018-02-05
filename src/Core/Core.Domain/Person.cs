@@ -7,5 +7,10 @@ namespace NOD.Bubbles.Ui.Core.Domain
         public string Name { get; set; }
 
         public ICollection<Bubble> Bubbles { get; set; }
+
+        public Person()
+        {
+            Bubbles = null;
+        }
     }
 }
